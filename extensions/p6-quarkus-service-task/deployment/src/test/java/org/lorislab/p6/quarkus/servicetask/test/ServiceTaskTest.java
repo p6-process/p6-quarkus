@@ -10,18 +10,22 @@ import org.junit.jupiter.api.extension.RegisterExtension;
 import org.lorislab.p6.quarkus.servicetask.ServiceTaskInput;
 import org.lorislab.p6.quarkus.servicetask.ServiceTaskOutput;
 import org.lorislab.p6.quarkus.servicetask.runtime.ProcessExecutor;
+import org.lorislab.p6.quarkus.servicetask.runtime.ServiceTaskClient;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import javax.inject.Inject;
 import java.util.Collections;
 
-public class SimpleTest {
+public class ServiceTaskTest {
 
-    Logger log = LoggerFactory.getLogger(SimpleTest.class);
+    Logger log = LoggerFactory.getLogger(ServiceTaskTest.class);
 
     @Inject
     ProcessExecutor executor;
+
+    @Inject
+    ServiceTaskClient serviceTaskClient;
 
     @RegisterExtension
     static final QuarkusUnitTest config =   new QuarkusUnitTest()
@@ -30,8 +34,11 @@ public class SimpleTest {
             );
 
     @Test
-    @DisplayName("Simple test")
-    public void testSimpleProcess() throws Exception {
+    @DisplayName("Service task test")
+    public void testServiceTask() {
+        Assertions.assertNotNull(executor);
+        Assertions.assertNotNull(serviceTaskClient);
+
         ServiceTaskInput input = new ServiceTaskInput("process1", "1.0", "service1"
         , Collections.singletonMap("INPUT","I1"));
         ServiceTaskOutput out = executor.execute(input);

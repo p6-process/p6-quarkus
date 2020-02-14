@@ -4,9 +4,11 @@ import io.smallrye.reactive.messaging.amqp.AmqpMessage;
 import io.smallrye.reactive.messaging.annotations.Channel;
 import io.smallrye.reactive.messaging.annotations.Emitter;
 
+import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
 import java.util.UUID;
 
+@ApplicationScoped
 public class DeploymentService {
 
     @Inject
