@@ -1,0 +1,24 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+    
+    <parent>
+        <groupId>org.lorislab.p6.quarkus</groupId>
+        <artifactId>p6-quarkus</artifactId>
+        <version>0.1.0-SNAPSHOT</version>
+        <relativePath>../</relativePath>
+    </parent>
+
+    <artifactId>p6-quarkus-extensions</artifactId>
+    <version>0.1.0-SNAPSHOT</version>
+    <name>p6-quarkus-extensions</name>
+    <packaging>pom</packaging>
+    
+    <modules>
+        <module>p6-quarkus-service-task</module>
+        <module>p6-quarkus-process</module>
+    </modules>
+    
+</project>

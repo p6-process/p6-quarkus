@@ -1,0 +1,11 @@
+---
+name: "p6-quarkus-process"
+metadata:
+  keywords:
+  - "p6"
+  - "process"
+  - "workflow"
+  guide: "https://p6.lorislab.org/quarkus"
+  categories:
+  - "process"
+  status: "preview"

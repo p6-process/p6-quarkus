@@ -1,0 +1,12 @@
+---
+name: "p6-quarkus-service-task"
+metadata:
+  keywords:
+  - "p6-process"
+  - "process"
+  - "service task"
+  - "workflow"
+  guide: "https://p6.lorislab.org/quarkus"
+  categories:
+  - "process"
+  status: "preview"
