@@ -68,4 +68,8 @@ public class ServiceTaskInput {
         }
         return null;
     }
+
+    public boolean hasParameter(String key) {
+        return parameters.containsKey(key);
+    }
 }
