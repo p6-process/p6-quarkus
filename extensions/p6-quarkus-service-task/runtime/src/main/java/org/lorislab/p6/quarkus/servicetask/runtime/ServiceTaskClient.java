@@ -39,7 +39,7 @@ public class ServiceTaskClient {
                 ServiceTaskOutput output = executor.execute(input);
 
                 AmqpMessageBuilder builder = createResponse(message);
-                builder.withBody(JsonObject.mapFrom(output).toString());
+                builder.withBody(JsonObject.mapFrom(output.getData()).toString());
                 emitter.send(new AmqpMessage<>(builder.build()));
 
                 message.getAmqpMessage().accepted();
