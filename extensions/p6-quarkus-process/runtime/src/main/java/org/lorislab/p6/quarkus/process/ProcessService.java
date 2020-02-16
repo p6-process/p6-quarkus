@@ -28,9 +28,9 @@ public class ProcessService {
 
     public String startProcess(String id, String version, String instanceId, Map<String, Object> data) {
         Map<String, Object> header = new HashMap<>();
-        data.put("processId", id);
-        data.put("processInstanceId", instanceId);
-        data.put("processVersion", version);
+        header.put("processId", id);
+        header.put("processInstanceId", instanceId);
+        header.put("processVersion", version);
 
         AmqpMessage<String> output = new AmqpMessage<>(io.vertx.amqp.AmqpMessage.create()
                 .applicationProperties(JsonObject.mapFrom(header))
