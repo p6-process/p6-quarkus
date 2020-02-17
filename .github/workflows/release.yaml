@@ -20,9 +20,7 @@ jobs:
           java-version: 11
       - name: Set the release version
         run: mvn semver-release:version-release
-      - name: Build release
-        run: mvn $MAVEN_CLI_OPTS clean install
       - name: Install GPG key
         run: echo -e "${{ secrets.GPG_KEY_SECRET }}" | gpg --batch --import --passphrase "$GPG_PASSPHRASE"
       - name: Deploy release
-        run: mvn $MAVEN_CLI_OPTS deploy
+        run: mvn $MAVEN_CLI_OPTS deploy -Prelease
