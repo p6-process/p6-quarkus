@@ -6,7 +6,7 @@
     
     <groupId>org.lorislab.p6.quarkus</groupId>
     <artifactId>p6-quarkus</artifactId>
-    <version>0.3.0-SNAPSHOT</version>
+    <version>0.4.0-SNAPSHOT</version>
     <name>p6-quarkus</name>
     <packaging>pom</packaging>
 
